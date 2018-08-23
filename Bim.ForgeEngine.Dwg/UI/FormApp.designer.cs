@@ -586,7 +586,7 @@
             this.tabPage_revit.Location = new System.Drawing.Point(4, 23);
             this.tabPage_revit.Name = "tabPage_revit";
             this.tabPage_revit.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_revit.Size = new System.Drawing.Size(815, 354);
+            this.tabPage_revit.Size = new System.Drawing.Size(791, 354);
             this.tabPage_revit.TabIndex = 1;
             this.tabPage_revit.Text = "Revit轻量化转换";
             this.tabPage_revit.UseVisualStyleBackColor = true;
@@ -605,7 +605,7 @@
             // 
             this.tabPage_cloud.Location = new System.Drawing.Point(4, 23);
             this.tabPage_cloud.Name = "tabPage_cloud";
-            this.tabPage_cloud.Size = new System.Drawing.Size(815, 354);
+            this.tabPage_cloud.Size = new System.Drawing.Size(791, 354);
             this.tabPage_cloud.TabIndex = 2;
             this.tabPage_cloud.Text = "Cloud云端轻量化转换";
             this.tabPage_cloud.UseVisualStyleBackColor = true;
@@ -614,6 +614,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(799, 408);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.menuStrip1);

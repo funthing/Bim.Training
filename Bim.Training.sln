@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bim.BimEngine.Nw", "Bim.For
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bim.BimEngine.Revit", "Bim.ForgeEngine.Revit\Bim.BimEngine.Revit.csproj", "{63A8F657-00D3-42B1-A5A9-CA1504945037}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bimcc.BimEngine.Dwg", "Bim.ForgeEngine.Dwg\Bimcc.BimEngine.Dwg.csproj", "{C67DC1D3-5DC1-4D42-9A44-26472D3D2272}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bim.BimEngine.Dwg", "Bim.ForgeEngine.Dwg\Bim.BimEngine.Dwg.csproj", "{C67DC1D3-5DC1-4D42-9A44-26472D3D2272}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
