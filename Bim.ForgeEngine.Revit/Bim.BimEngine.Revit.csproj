@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63A8F657-00D3-42B1-A5A9-CA1504945037}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bimcc.BimEngine.Revit</RootNamespace>
+    <AssemblyName>Bimcc.BimEngine.Revit</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug_R2016\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;R2016</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release_R2016\</OutputPath>
+    <DefineConstants>TRACE;R2016</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2016\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2016\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Command_platform.cs" />
+    <Compile Include="Commands\Command_about.cs" />
+    <Compile Include="Application.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\Command_login.cs" />
+    <Compile Include="Commands\Command_plugin.cs" />
+    <Compile Include="Commands\Command_post.cs" />
+    <Compile Include="Commands\Command_user.cs" />
+    <Compile Include="Config\AppConfig.cs" />
+    <Compile Include="Config\AppConfigManager.cs" />
+    <Compile Include="Config\AppLocalConfig.cs" />
+    <Compile Include="Core\App.cs" />
+    <Compile Include="Core\FeatureInfo.cs" />
+    <Compile Include="Core\RuntimeLog.cs" />
+    <Compile Include="Helpers\ProgressHelper.cs" />
+    <Compile Include="Helpers\Progress\FormProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\Progress\FormProgress.designer.cs">
+      <DependentUpon>FormProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\Command_setting.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Strings.zh-Hans.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.zh-Hans.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Platform_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Platform_check.Designer.cs">
+      <DependentUpon>Platform_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Post.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Post.Designer.cs">
+      <DependentUpon>Post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User_info.Designer.cs">
+      <DependentUpon>User_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Tools.cs" />
+    <Compile Include="UI\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\About.designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormExportSvfzipXp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormExportSvfzipXp.designer.cs">
+      <DependentUpon>FormExportSvfzipXp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Plugin_manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Plugin_manage.designer.cs">
+      <DependentUpon>Plugin_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Setting.designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\AppHelper.cs" />
+    <Compile Include="Utility\FormHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Helpers\Progress\FormProgress.zh-Hans.resx">
+      <DependentUpon>FormProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.zh-Hans.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.zh-Hans.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormExportSvfzipXp.resx">
+      <DependentUpon>FormExportSvfzipXp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormExportSvfzipXp.zh-Hans.resx">
+      <DependentUpon>FormExportSvfzipXp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Platform_check.resx">
+      <DependentUpon>Platform_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Plugin_manage.resx">
+      <DependentUpon>Plugin_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Post.resx">
+      <DependentUpon>Post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User_info.resx">
+      <DependentUpon>User_info.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Helpers\Progress\FormProgress.resx">
+      <DependentUpon>FormProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bimcc.BimEngine.Revit.addin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\BIMCC_logo.png" />
+    <None Include="Resources\setting.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\post.png" />
+    <None Include="Resources\plugin.png" />
+    <None Include="Resources\platform.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\submit.png" />
+    <None Include="Resources\export.png" />
+    <None Include="Resources\BIMCC.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Bimangle.ForgeEngine.Revit2018">
+      <Version>3.9.2</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetZip">
+      <Version>1.10.1</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>9.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="RestSharp">
+      <Version>106.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.ValueTuple">
+      <Version>4.4.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- BEGIN STANDARD SECTION DO NOT EDIT 
+    except for ensuring x:Uid="CustomRibbonTab" has a unique ID
+    -->
+<RibbonControl 
+    x:Uid="CustomRibbonBdipTab" xmlns="clr-namespace:Autodesk.Windows;assembly=AdWindows" 
+    xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:adwi="clr-namespace:Autodesk.Internal.Windows;assembly=AdWindows"  
+    xmlns:system="clr-namespace:System;assembly=mscorlib" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Autodesk.Navisworks.Gui.Roamer.AIRLook;assembly=navisworks.gui.roamer">
+    <!-- END STANDARD SECTION DO NOT EDIT -->
+
+   <!-- RibbonTab defines a tab on the ribbon
+        Attributes for RibbonTab include:
+            Id = Defines a unique identifier for the ribbon tab - this must be identical to the ribbon
+                 tab Id in compiled code.
+            Title = defines the text than appears on the tab. This overrides the DisplayName defined
+                 by the RibbonTab attribute in compiled code.         
+            KeyTip = The key or combination of keys that enables the tab to be activated using the keyboard
+                 rather than the mouse. Keytips are made visible by pressing <Alt>.
+   -->
+    <RibbonTab Id="ID_CustomTab_1" Title="筑云轻量化" KeyTip="C1">
+
+        <!-- RibbonPanel provides a distinct panel in the ribbon tab for a group of buttons -->
+        <RibbonPanel x:Uid="RibbonPanel_1">
+            <!-- RibbonPanelSource defines the content and proerties of the parent RibbonPanel. -->
+            <RibbonPanelSource x:Uid="RibbonPanelSource_RibbonPanel_1" KeyTip="C1" Title="Bimcc Export">
+
+                <!-- local:NWRibbonButton indicates a button in the ribbon.
+                Attributes for button include:
+                    Size: Standard (default) or Large.
+                    Image = Image to display (overrides that defined by plugin attributes in the compiled code) 
+                            The image path defines the location relative to the ribbon definition file (i.e. this), 
+				                hence our image path here indicates that the images are located in an Images subdirectory
+                            next to the sub-directory when the ribbon file is located. If you wish you can define the 
+                            image location relative to the Roamer executable by using Image="pack://siteOfOrigin:,,,{image location}"
+                            where {image location} is the location of the icon (or png file) relative to the executable. 
+                            Standard images must be 16x16 pixels. For large buttons specify Size="Large" and define a 
+                            LargeImage attribute, which must be 32x32 pixels.
+                    KeyTip = the key or combination of keys that enables the button to be activated using the keyboard
+                            rather than the mouse. Keytips are made visible by pressing <Alt> .
+                    Orientation = "Horizontal" or "Vertical":
+                            Horizontal places the buttons side by side with the Text.
+                            Vertical places the buttons above the text.
+                    ShowText : indicates whether the button should display its Text with the button, or image only.
+                    Text: text displayed on the button if ShowText is true (overrides that defined by plugin attributes 
+                            in the compiled code) 
+            -->
+                <!-- Example of large button, text visible underneath, LargeImage is defined by LargeIcon attribute property
+                 in compiled code. Text is defined by DisplayName attribute property in compile code. -->
+                <local:NWRibbonButton x:Uid="Button_1_Logo" Id="ID_Button_1_Logo"
+                                      Size="Large"
+                                      KeyTip="B1"
+                                      ShowText="True" 
+                                      Text="模型轻量化"
+                                      Image="..\Images/Small/logopng.ico" 
+                                      LargeImage="..\Images/Large/logopng.ico"
+                                      Orientation="Vertical"/>
+                <local:NWRibbonButton x:Uid="Button_2_License" Id="ID_Button_2_License"
+                                      Size="Large"
+                                      KeyTip="B2"
+                                      ShowText="True" 
+                                      Text="授权申请"
+                                      Image="..\Images/Small/license.ico" 
+                                      LargeImage="..\Images/Large/license.ico"
+                                      Orientation="Vertical"/>
+                <local:NWRibbonButton x:Uid="Button_3_Update" Id="ID_Button_3_Update"
+                                      Size="Large"
+                                      KeyTip="B3"
+                                      ShowText="True" 
+                                      Text="检查更新"
+                                      Image="..\Images/Small/update.ico" 
+                                      LargeImage="..\Images/Large/update.ico"
+                                      Orientation="Vertical"/>
+                <local:NWRibbonButton x:Uid="Button_4_Video" Id="ID_Button_4_Video"
+                                      Size="Large"
+                                      KeyTip="B4"
+                                      ShowText="True" 
+                                      Text="教学视频"
+                                      Image="..\Images/Small/video.ico" 
+                                      LargeImage="..\Images/Large/video.ico"
+                                      Orientation="Vertical"/>
+                <local:NWRibbonButton x:Uid="Button_5_Qq" Id="ID_Button_5_Qq"
+                                      Size="Large"
+                                      KeyTip="B5"
+                                      ShowText="True" 
+                                      Text="QQ支持"
+                                      Image="..\Images/Small/qq.ico" 
+                                      LargeImage="..\Images/Large/qq.ico"
+                                      Orientation="Vertical"/>
+                <local:NWRibbonButton x:Uid="Button_6_Bbs" Id="ID_Button_6_Bbs"
+                                      Size="Large"
+                                      KeyTip="B6"
+                                      ShowText="True" 
+                                      Text="论坛"
+                                      Image="..\Images/Small/bbs2.ico" 
+                                      LargeImage="..\Images/Large/bbs2.ico"
+                                      Orientation="Vertical"/>
+                <local:NWRibbonButton x:Uid="Button_7_Home" Id="ID_Button_7_Home"
+                                      Size="Large"
+                                      KeyTip="B7"
+                                      ShowText="True" 
+                                      Text="官方网站"
+                                      Image="..\Images/Small/home.ico" 
+                                      LargeImage="..\Images/Large/home.ico"
+                                      Orientation="Vertical"/>
+                <local:NWRibbonButton x:Uid="Button_8_Platform" Id="ID_Button_8_Platform"
+                                      Size="Large"
+                                      KeyTip="B8"
+                                      ShowText="True" 
+                                      Text="打开平台"
+                                      Image="..\Images/Small/platform.ico" 
+                                      LargeImage="..\Images/Large/platform.ico"
+                                      Orientation="Vertical"/>
+                <local:NWRibbonButton x:Uid="Button_9_About" Id="ID_Button_9_About"
+                                      Size="Large"
+                                      KeyTip="B9"
+                                      ShowText="True" 
+                                      Text="关于我们"
+                                      Image="..\Images/Small/about.ico" 
+                                      LargeImage="..\Images/Large/about.ico"
+                                      Orientation="Vertical"/>
+            </RibbonPanelSource>
+        </RibbonPanel>
+
+    </RibbonTab>
+
+    <!-- BEGIN STANDARD SECTION DO NOT EDIT -->
+</RibbonControl>
+<!-- END STANDARD SECTION DO NOT EDIT -->
